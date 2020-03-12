@@ -37,11 +37,11 @@ public class VideoRepoApplication implements CommandLineRunner {
         userRepository.save(william);
 
         Video video1 = new Video();
-        video1.setVideoLink("https://www.youtube.com/watch?v=ouwCWDbBskU");
+        video1.setVideoLink("https://www.youtube.com/embed/ouwCWDbBskU");
         video1.setVideoDescription("Kanye West - Power");
 
         Video video2 = new Video();
-        video2.setVideoLink("https://www.youtube.com/watch?v=1aEImx74gLA");
+        video2.setVideoLink("https://www.youtube.com/embed/1aEImx74gLA");
         video2.setVideoDescription("Young Jeezy - Put On");
 
         videoRepository.save(video1);

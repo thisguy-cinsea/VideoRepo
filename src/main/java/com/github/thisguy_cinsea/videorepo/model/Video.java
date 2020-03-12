@@ -6,7 +6,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-public class Video {
+public class Video implements VideoInterface {
 
     @Id @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer videoId;
@@ -16,11 +16,11 @@ public class Video {
     public Video() {
     }
 
-    public Integer getVideoId() {
+    public Integer getId() {
         return videoId;
     }
 
-    public void setVideoId(Integer videoId) {
+    public void setId(Integer videoId) {
         this.videoId = videoId;
     }
 

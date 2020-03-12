@@ -1,26 +1,27 @@
 package com.github.thisguy_cinsea.videorepo.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
-public class User {
+//@Table(name = "user")
+public class User implements UserInterface {
 
     @Id @GeneratedValue(strategy = GenerationType.AUTO)
+//    @Column(name = "user_id")
     private Integer userId;
+//    @Column(name = "user_name")
     private String userName;
+//    @Column(name = "password")
     private String password;
 
     public User() {
     }
 
-    public Integer getUserId() {
+    public Integer getId() {
         return userId;
     }
 
-    public void setUserId(Integer userId) {
+    public void setId(Integer userId) {
         this.userId = userId;
     }
 
