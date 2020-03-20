@@ -31,20 +31,20 @@ public class UserService implements UserServiceInterface<User>{
 //        return repository.findById(userId).orElse(null);
 //    }
 //
-//    public User create(User user) {
-//        User newUser = new User();
-//        newUser.setUserName(user.getUserName());
-//        newUser.setPassword(user.getPassword());
-//        return repository.save(newUser);
-//    }
-//
-//    public User update(Integer userId, User user) {
-//        User foundUser = getById(userId);
-//        foundUser.setPassword(user.getPassword());
-//        foundUser.setUserName(user.getUserName());
-//        repository.save(foundUser);
-//        return foundUser;
-//    }
+    public User create(User user) {
+        User newUser = new User();
+        newUser.setUserName(user.getUserName());
+        newUser.setPassword(user.getPassword());
+        return repository.save(newUser);
+    }
+
+    public User update(Integer userId, User user) {
+        User foundUser = (User) getById(userId);
+        foundUser.setPassword(user.getPassword());
+        foundUser.setUserName(user.getUserName());
+        repository.save(foundUser);
+        return foundUser;
+    }
 //
 //    public User delete(Integer userId) {
 //        User deletedUser = getById(userId);

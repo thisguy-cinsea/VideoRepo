@@ -38,13 +38,13 @@ public class VideoService implements ServiceInterface<VideoRepository, VideoInte
         newVideo.setVideoLink(video.getVideoLink());
         return repository.save(newVideo);
     }
-//
-//    public Video update(Integer videoId, Video video) {
-//        Video foundVideo = getById(videoId);
-//        foundVideo.setVideoLink(video.getVideoLink());
-//        foundVideo.setVideoDescription(video.getVideoDescription());
-//        return repository.save(foundVideo);
-//    }
+
+    public Video update(Integer videoId, Video video) {
+        Video foundVideo = (Video) getById(videoId);
+        foundVideo.setVideoLink(video.getVideoLink());
+        foundVideo.setVideoDescription(video.getVideoDescription());
+        return repository.save(foundVideo);
+    }
 //
 //    public Video delete(Integer videoId) {
 //        Video deletedVideo = getById(videoId);

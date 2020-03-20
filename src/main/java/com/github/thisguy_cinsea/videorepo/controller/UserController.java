@@ -36,11 +36,12 @@ public class UserController implements ControllerInterface<UserService, UserInte
 //        return service.getById(userId);
 //    }
 //
-//    @PostMapping("/")
-//    public User create(@Valid @RequestBody User user){
-//        return service.create(user);
-//    }
-//
+    @PostMapping("/")
+    public User create(@Valid @RequestBody User user){
+        System.out.println("userController.create: " + user);
+        return service.create(user);
+    }
+
 //    @PutMapping("/{id}")
 //    public User update(@PathVariable (value = "id") Integer userId,
 //                       @Valid @RequestBody User user){
